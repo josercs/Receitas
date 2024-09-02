@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Receitas do José</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="formatos.css">
+    <link rel="stylesheet" href="receitas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="receitas.html">Receitas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Efetue seu Cadastro</h2>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP" required>
+            </div>
+            <div class="form-group">
+                <label for="rua">Rua</label>
+                <input type="text" class="form-control" id="rua" placeholder="Digite sua rua" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="numero">N°</label>
+                    <input type="text" class="form-control" id="numero" placeholder="Número" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Cidade" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="uf">UF</label>
+                    <input type="text" class="form-control" id="uf" placeholder="UF" required>
+                </div>
+            </div>
+            <button type="button" class="btn btn-dark" onclick="enviarEmail()">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer class="text-center">
+        <p>&copy; JOSE 2022</p>
+    </footer>
+
+    <script>
+        function enviarEmail() {
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var cep = document.getElementById('cep').value;
+            var rua = document.getElementById('rua').value;
+            var numero = document.getElementById('numero').value;
+            var complemento = document.getElementById('complemento').value;
+            var cidade = document.getElementById('cidade').value;
+            var uf = document.getElementById('uf').value;
+
+            var body = `Nome: ${nome}%0D%0AE-mail: ${email}%0D%0ACEP: ${cep}%0D%0ARua: ${rua}%0D%0ANúmero: ${numero}%0D%0AComplemento: ${complemento}%0D%0ACidade: ${cidade}%0D%0AUF: ${uf}`;
+
+            window.location.href = `mailto:josercdossantos@hotmail.com?subject=Novo Cadastro&body=${body}`;
+        }
+    </script>
+</body>
+</html>

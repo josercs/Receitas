@@ -1,0 +1,82 @@
+body {
+    background-color: #FF5733; /* Altere para a cor de fundo do logo */
+    font-family: Arial, sans-serif;
+
+}
+
+header, main, footer {
+    padding: 30px;
+    margin: 0;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 0px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}
+button.btn.btn-dark {
+    margin-top: 10px; /* Adiciona espaço acima do botão */
+    display: block; /* Garante que o botão ocupe toda a linha */
+    width: 10%; 
+    float: right;
+
+}
+.logo-title-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o logo e o título */
+    justify-content: center; /* Centraliza o conteúdo */
+    padding: 80px 20px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; /* Espaço entre o logo e o título */
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0; /* Remove a margem padrão */
+}
+.jumbotron {
+    background-color: #FF5733; /* Altere para a cor de fundo do logo */
+    padding: 50px 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+p{
+    margin: 0px;
+}
